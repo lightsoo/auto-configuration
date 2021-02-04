@@ -1,0 +1,7 @@
+spring:
+  profiles.active: local
+  application:
+    name: rest-api-server
+
+server:
+  port: 8080

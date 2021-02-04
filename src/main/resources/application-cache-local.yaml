@@ -1,0 +1,28 @@
+redis:
+  enabled: true
+  units:
+    - unit-name: cas_coupon
+      cluster:
+        max-redirects: 2
+        timeout: 3000
+        nodes:
+          - 127.0.0.1:6379
+          - 127.0.0.1:6380
+          - 127.0.0.1:6381
+    - unit-name: cas_coupon
+      cluster:
+        max-redirects: 2
+        timeout: 3000
+        nodes:
+          - 127.0.0.1:7000
+          - 127.0.0.1:7001
+          - 127.0.0.1:7002
+          - 127.0.0.1:7003
+          - 127.0.0.1:7004
+spring:
+  redis:
+    lettuce:
+      pool:
+        max-active: 50
+        max-idle: 50
+        min-idle: 50
